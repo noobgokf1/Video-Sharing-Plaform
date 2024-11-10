@@ -30,7 +30,7 @@ Video Sharing Platform is a web-based application that allows users to upload an
     ```
 2. Change directory into the project folder:
     ```bash
-    cd VideoSharingPlatform
+    cd Video-Sharing-Plaform
     ```
 3. Install dependencies:
     ```bash
