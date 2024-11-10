@@ -26,7 +26,7 @@ Video Sharing Platform is a web-based application that allows users to upload an
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/VideoSharingPlatform.git
+    git clone https://github.com/noobgokf1/Video-Sharing-Plaform.git
     ```
 2. Change directory into the project folder:
     ```bash
