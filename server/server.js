@@ -6,7 +6,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const app = express();
 const port = 3000;
 
-const publicDir = path.join(process.cwd(), 'public');
+const publicDir = "../public"
 const videosDir = path.join(publicDir, 'videos');
 const thumbnailsDir = path.join(videosDir, 'thumbnails');
 
