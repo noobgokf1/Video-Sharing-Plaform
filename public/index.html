@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Sharing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <h1>Video Sharing Platform</h1>
+  </div>
+  <div class="container">
+    <form id="video-upload-form" enctype="multipart/form-data">
+      <input type="file" id="video-file" name="video" accept="video/*" required />
+      <input type="text" id="video-title" name="title" placeholder="Enter video title" required />
+      <button type="submit">Upload Video</button>
+      <progress id="upload-progress" value="0" max="100" style="display: none;"></progress>
+    </form>
+
+    <div id="video-link-container" style="display: none;">
+      <h2>Video Uploaded Successfully!</h2>
+      <p>
+        Your video link: 
+        <span style="display: flex; align-items: center;">
+          <a id="video-link" href="" target="_blank" style="margin-right: 5px;"></a>
+          <button id="copy-link" style=" border: none; padding: 0; cursor: pointer;">
+            <img src="copy.png" alt="Copy Link" style="width: 24px; height: 24px;"/>
+          </button>
+        </span>
+      </p>
+    </div>
+
+    <div class="video-list">
+      <h2>Uploaded Videos</h2>
+      <div id="video-container"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
