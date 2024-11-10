@@ -36,7 +36,11 @@ Video Sharing Platform is a web-based application that allows users to upload an
     ```bash
     npm install
     ```
-4. Start the server:
+4. Change directory into the server folder
+    ```bash
+    cd server
+    ```
+5. Start the server:
     ```bash
     node server.js
     ```
