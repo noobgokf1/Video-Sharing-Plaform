@@ -134,24 +134,20 @@ app.get('/video/:filename', (req, res) => {
     const filename = req.params.filename;
     const videoPath = path.join(videosDir, filename);
   
-    // Check if the file exists before attempting to send it
     fs.access(videoPath, fs.constants.F_OK, (err) => {
       if (err) {
         console.error('Video not found:', err);
         return res.status(404).json({ error: 'Video not found' });
       }
   
-      // Serve the video file if it exists
       res.sendFile(videoPath, (err) => {
         if (err) {
-          // Suppress logging if the error is due to the connection being aborted
           if (err.code === 'ECONNABORTED' || err.message.includes('Request aborted')) {
             console.warn('Request aborted by the client');
           } else {
             console.error('Error sending video file:', err);
           }
   
-          // Respond only if headers haven't already been sent
           if (!res.headersSent) {
             res.status(500).json({ error: 'Error serving video file' });
           }
